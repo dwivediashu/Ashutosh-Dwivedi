@@ -1,33 +1,14 @@
+# Ashutosh — Free Web Page (GitHub Pages)
 
-# Ashutosh — One‑page Portfolio
+This is a simple, single‑page website for **Ashutosh Dwivedi**. It links to LinkedIn and Google Scholar and is optimized for GitHub Pages.
 
-A clean, responsive one‑page site for a PhD engineer. Edit `index.html` to personalize sections.
+## How to deploy (GitHub Pages)
+1. Create a public repo (or use an existing one).
+2. Upload all files from this folder (keep `index.html` at the root).
+3. In your repo: **Settings → Pages** → Source: `Deploy from a branch` → Branch: `main` and Folder: `/ (root)` → **Save**.
+4. Your site will be available at `https://<username>.github.io/<repo>/` within a minute.
 
-## Quick Start
-
-1. Open `index.html` in your browser to preview locally.
-2. Replace placeholders:
-   - Profile links (GitHub/Scholar/LinkedIn)
-   - Projects (cards in the `#projects` section)
-   - Publications (list items in `#publications`)
-   - Email in the Contact section
-   - `assets/cv.pdf` with your real CV
-3. Deploy (any of these):
-   - **GitHub Pages**: push the folder to a repo → Settings → Pages → deploy from `main`.
-   - **Netlify**: drag‑and‑drop the folder into the app.
-   - **Firebase Hosting**: `firebase init` → `firebase deploy`.
-
-## Theming
-- Light/dark toggle is built‑in. Colors are in `assets/styles.css` as CSS variables.
-
-## Structure
-```
-/ (index.html)
-/assets/styles.css
-/assets/script.js
-/assets/avatar.svg
-/assets/cv.pdf (placeholder)
-```
-
-## License
-MIT — do anything, no warranty.
+## Customize
+- Edit text in `index.html` (hero, About, publications).
+- Colors & theme in `assets/styles.css`.
+- Favicon/logo in `assets/icon.svg`.
