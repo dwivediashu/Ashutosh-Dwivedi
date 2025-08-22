@@ -21,6 +21,7 @@
     "knowsAbout": ["3D concrete printing","additive construction","low-carbon materials","supplementary cementitious materials"],
     "url": "",
     "sameAs": [
+      "https://www.researchgate.net/profile/Ashutosh-Dwivedi-9?ev=hdr_xprf",
       "https://www.linkedin.com/in/dwivedi-ashutosh/",
       "https://scholar.google.com/citations?user=fG0DAJgAAAAJ&hl=en"
     ]
@@ -48,7 +49,7 @@
           <div class="cta">
             <a class="btn" href="https://www.linkedin.com/in/dwivedi-ashutosh/" target="_blank" rel="noopener">💼 LinkedIn</a>
             <a class="btn btn-secondary" href="https://scholar.google.com/citations?user=fG0DAJgAAAAJ&hl=en" target="_blank" rel="noopener">🎓 Google Scholar</a>
-          </div>
+                      </div>
         </div>
         <div class="stack">
         <div class="card photo-card">
@@ -96,10 +97,14 @@
       </div>
     </section>
 
-    
     <section id="achievements" class="section">
       <div class="container">
         <h2>Awards & Press</h2>
+        <figure class="press-figure">
+          <img src="assets/awards-press.jpg" alt="Media coverage collage and awards highlights" />
+          <figcaption class="muted small">Awards & media highlights from national outlets and institutional channels.</figcaption>
+        </figure>
+
         <div class="cards">
           <article class="card">
             <h3>Best Poster Award — TLC2 Workshop</h3>
@@ -120,11 +125,47 @@
       </div>
     </section>
 
-    
     <section id="impact" class="section alt">
       <div class="container">
         <h2>Research Impact and Media Coverage</h2>
         <p>Our research has drawn significant attention, with coverage in leading outlets such as <strong>The Times of India</strong>, <strong>The Hindu</strong>, <strong>NDTV</strong>, and <strong>India Today</strong>. It has also been highlighted on platforms like <strong>The Better India</strong>, recognized by the <strong>Department of Science and Technology (DST), India</strong>, and featured in an <strong>IISc press release</strong>.</p>
+      </div>
+    </section>
+
+    
+    <section id="find-papers" class="section">
+      <div class="container">
+        <h2>Find My Papers</h2>
+        <p>Search my work on Google Scholar or ScienceDirect. Try a keyword or use the quick chips.</p>
+        <div class="search-grid">
+          <div class="search-card card">
+            <h3>Google Scholar</h3>
+            <form id="scholarForm" class="search-form" role="search" aria-label="Search on Google Scholar">
+              <input id="scholarQ" type="search" placeholder="e.g., 3D concrete printing interlayer bond" />
+              <button class="btn" type="submit">Search</button>
+            </form>
+            <div class="chips" data-target="scholarQ">
+              <button type="button" class="chip">3D concrete printing</button>
+              <button type="button" class="chip">alkali-activated materials</button>
+              <button type="button" class="chip">low-carbon binders</button>
+            </div>
+            <p class="muted small">Opens Google Scholar in a new tab.</p>
+          </div>
+
+          <div class="search-card card">
+            <h3>ScienceDirect</h3>
+            <form id="sdForm" class="search-form" role="search" aria-label="Search on ScienceDirect">
+              <input id="sdQ" type="search" placeholder="e.g., stabilized earth carbon sequestration" />
+              <button class="btn" type="submit">Search</button>
+            </form>
+            <div class="chips" data-target="sdQ">
+              <button type="button" class="chip">carbon sequestration mortars</button>
+              <button type="button" class="chip">3D printing mortar rheology</button>
+              <button type="button" class="chip">supplementary cementitious materials</button>
+            </div>
+            <p class="muted small">Opens ScienceDirect in a new tab.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -146,6 +187,62 @@
       </div>
     </section>
 
+    <section id="research-tools" class="section alt">
+      <div class="container">
+        <h2>Researcher Tools</h2>
+        <div class="tools-grid">
+          <div class="card">
+            <h3>DOI → Open</h3>
+            <p>Paste a DOI to open the publisher page instantly.</p>
+            <div class="tool-row">
+              <input id="doiInput" type="text" placeholder="10.1016/j.conbuildmat.2023.132268" />
+              <button id="openDoi" class="btn">Open</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Fetch Citation (Crossref)</h3>
+            <p>Get a quick citation and BibTeX from Crossref metadata.</p>
+            <div class="tool-row">
+              <input id="crDoi" type="text" placeholder="Enter DOI (e.g., 10.1016/j.scitotenv.2024.171654)" />
+              <button id="getCitation" class="btn">Fetch</button>
+            </div>
+            <pre id="citationOut" class="code" aria-live="polite"></pre>
+            <div class="tool-actions">
+              <button id="copyCitation" class="btn-mini" disabled>Copy citation</button>
+              <button id="copyBibtex" class="btn-mini" disabled>Copy BibTeX</button>
+            </div>
+            <p class="muted small">Powered by <a href="https://api.crossref.org/" target="_blank" rel="noopener">Crossref</a>. Some publishers may have incomplete metadata.</p>
+          </div>
+        
+          <div class="card calc-card">
+            <h3>Scientific Calculator</h3>
+            <div class="calc-row">
+              <input id="calcInput" type="text" placeholder="Type expression, e.g., sin(30deg)+sqrt(2)" />
+              <button id="calcEval" class="btn" type="button">=</button>
+            </div>
+            <div class="calc-keypad">
+              <button class="key">(</button><button class="key">)</button>
+              <button class="key">^</button><button class="key">%</button>
+              <button class="key">/</button><button class="key">*</button>
+              <button class="key">-</button><button class="key">+</button>
+              <button class="key">sin(</button><button class="key">cos(</button>
+              <button class="key">tan(</button><button class="key">log(</button>
+              <button class="key">ln(</button><button class="key">sqrt(</button>
+              <button class="key">pi</button><button class="key">e</button>
+              <button class="key">deg</button><button class="key">rad</button>
+              <button class="key">,</button><button id="keyClear" class="btn-mini">Clear</button>
+            </div>
+            <div class="calc-options">
+              <label><input type="checkbox" id="degMode" checked> Degrees</label>
+            </div>
+            <pre id="calcOut" class="code" aria-live="polite"></pre>
+          </div>
+</div>
+      </div>
+    </section>
+
+
     <section id="about" class="section">
       <div class="container grid-2">
         <div>
@@ -159,6 +256,47 @@
         </div>
       </div>
     </section>
+  
+    
+    <section id="researchgate" class="section">
+      <div class="container grid-2">
+        <div>
+          <h2>ResearchGate</h2>
+          <p>Follow my work on ResearchGate to track preprints, citations, and project updates in <strong>3D concrete printing</strong> and <strong>low‑carbon construction materials</strong>.</p>
+          <div class="cta">
+            <a class="btn" href="https://www.researchgate.net/profile/Ashutosh-Dwivedi-9?ev=hdr_xprf" target="_blank" rel="noopener">📘 Follow on ResearchGate</a>
+            <a class="btn btn-secondary" href="https://www.researchgate.net/profile/Ashutosh-Dwivedi-9?ev=hdr_xprf" target="_blank" rel="noopener">View all research</a>
+          </div>
+          <ul class="list small">
+            <li>Request full texts or datasets directly.</li>
+            <li>See project timelines and co‑author network.</li>
+            <li>Get notified when new work is posted.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Topics on RG</h3>
+          <ul class="list">
+            <li>3D Concrete Printing (3DCP)</li>
+            <li>Alkali‑activated & low‑carbon binders</li>
+            <li>Interlayer bond & rheology</li>
+            <li>Durability & structural performance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>If you’d like to discuss research collaborations, invited talks, or student projects, email works best.</p>
+        <div class="contact-actions">
+          <a class="btn" href="mailto:ashutoshdwi1@iisc.ac.in">✉️ Email: ashutoshdwi1@iisc.ac.in</a>
+          <button id="copyEmail" class="btn-mini" type="button" aria-label="Copy email to clipboard">Copy email</button>
+        </div>
+        <p class="muted">You can also reach me via <a href="https://www.linkedin.com/in/dwivedi-ashutosh/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -167,6 +305,6 @@
     </div>
   </footer>
 
-  <script src="assets/script.js"></script>
+  <script defer src="assets/script.js"></script>
 </body>
 </html>
